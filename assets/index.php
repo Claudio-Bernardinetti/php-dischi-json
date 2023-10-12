@@ -19,22 +19,48 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Dischi JSON</title>
     <!-- Title -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="./style.css">
     <!-- Link CSS -->
 </head>
 <body>
-    <div id="app">
 
-        <div v-for="disco in dischi">
-            <h2>{{ disco.title }}</h2>
-            <img :src="disco.poster" alt="Poster">
-            <p>{{ disco.author }}</p>
-            <p>{{ disco.year }}</p>
-            <p>{{ disco.genre }}</p>
+    <div id="app">
+        <header>
+            <div class="header"></div>
+        </header>
+
+        <div class="container_card">
+            <div class="row_card">
+                
+                  <div class="card col-12 col-md-6 col-lg-4" v-for="disco in dischi">
+                    <div class="card_img">
+                        <img :src="disco.poster" alt="Poster">
+                    </div>
+                    <div class="card_text text-center">
+                        <h4>{{ disco.title }}</h4>
+                        <p>{{ disco.author }}</p>
+                        <p>{{ disco.year }}</p>
+                    </div>
+                  </div>
+                
+            </div>
+            <!-- <div class="row">
+                <div class="col-sm-4" >
+                  <div v-for="disco in dischi">
+                    <img :src="disco.poster" alt="Poster">
+                    <h2>{{ disco.title }}</h2>
+                    <p>{{ disco.author }}</p>
+                    <p>{{ disco.year }}</p>
+                  </div>
+                </div>
+            </div> -->
+            
         </div>
-        
     </div>
 
+    <!-- <p>{{ disco.genre }}</p> -->
     <!-- Vue.js -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <!-- AXIOS -->

@@ -5,6 +5,7 @@ createApp({
         dischi: []
     }
   },
+  
   created() {
     axios.get('script.php')
         .then(response => {
