@@ -25,9 +25,7 @@ body {
     width: 50px;
     aspect-ratio: 1/1;
     margin: 1.5rem;
-    /* background-color:var(--sf-icon); */
-    filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(7174%)
-    hue-rotate(13deg) brightness(104%) contrast(118%);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(7174%) hue-rotate(106deg) brightness(104%) contrast(118%);
 }
 
 
