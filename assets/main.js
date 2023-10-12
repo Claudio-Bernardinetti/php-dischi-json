@@ -2,9 +2,14 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      title: 'Hello Vue',
-      
+        dischi: []
     }
   },
+  created() {
+    axios.get('script.php')
+        .then(response => {
+            this.dischi = response.data;
+        });
+  }
   
 }).mount('#app')

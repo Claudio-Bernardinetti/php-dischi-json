@@ -24,7 +24,15 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
 </head>
 <body>
     <div id="app">
-       <h1>Hello Vue</h1>
+
+        <div v-for="disco in dischi">
+            <h2>{{ disco.title }}</h2>
+            <img :src="disco.poster" alt="Poster">
+            <p>{{ disco.author }}</p>
+            <p>{{ disco.year }}</p>
+            <p>{{ disco.genre }}</p>
+        </div>
+        
     </div>
 
     <!-- Vue.js -->
