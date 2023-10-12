@@ -19,6 +19,8 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Dischi JSON</title>
     <!-- Title -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontawesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./style.css">
@@ -28,7 +30,9 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
 
     <div id="app">
         <header>
-            <div class="header"></div>
+            <div class="header">
+                <img src="../assets/img/logo-small.svg" alt="">
+            </div>
         </header>
 
         <div class="container_card">
