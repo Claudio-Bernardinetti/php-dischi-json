@@ -47,6 +47,10 @@ body {
     cursor: pointer;
 }
 
+.card:hover {
+    border: 1px solid var(--sf-icon);
+}
+
 .card_img {
     display: flex;
     justify-content: center;
