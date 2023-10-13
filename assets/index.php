@@ -11,6 +11,7 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 Bonus (da fare entro domani prima della correzione)
 Al click su un disco, recuperare e mostrare i dati del disco selezionato.
  */
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,35 +37,44 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
         </header>
 
         <div class="container_card">
-            <div class="row_card">
-                
-                  <div class="card col-12 col-md-6 col-lg-4" v-for="disco in dischi">
-                    <div class="card_img">
-                        <img :src="disco.poster" alt="Poster">
+                <div class="row_card">
+                    <div class="col" v-for="disco in dischi">
+                        <div class="card text-bg-dark" @click="disco.visible = !disco.visible">
+                            <div class="card_img">
+                               <img :src="disco.poster" alt="" class="card-img-top">
+                            </div>
+                            <div class="card_text text-center">
+                                <h4 class="card-title">
+                                    {{disco.title}}
+                                </h4>
+                                <p>{{disco.author}}</p>
+                                <p><strong> {{disco.year}}</strong></p>   
+                            </div>
+                        </div>
+                        <!-- Start Hover -->
+                        <div class="disco_detail rounded" :class="{'d-none': !disco.visible}">
+                            <div class="row_card flex-row-reverse">
+                                <div class="d-flex">
+                                    <button class="btn btn-close border p-2" @click="disco.visible = ! disco.visible">
+                                    </button>
+                                </div>
+                                <div class="col-12 d-flex flex-column align-items-center pt-5">
+                                    <img :src="disco.poster " alt="" width="300">
+                                    <div class="card_text text-center mt-3">
+                                        <h3>{{disco.title}}</h3>
+                                        <h6>{{disco.author}}</h6>
+                                        <h4>{{disco.year}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_text text-center">
-                        <h4>{{ disco.title }}</h4>
-                        <p>{{ disco.author }}</p>
-                        <p>{{ disco.year }}</p>
-                    </div>
-                  </div>
-                
-            </div>
-            <!-- <div class="row">
-                <div class="col-sm-4" >
-                  <div v-for="disco in dischi">
-                    <img :src="disco.poster" alt="Poster">
-                    <h2>{{ disco.title }}</h2>
-                    <p>{{ disco.author }}</p>
-                    <p>{{ disco.year }}</p>
-                  </div>
                 </div>
-            </div> -->
-            
-        </div>
+            </div>
+
     </div>
 
-    <!-- <p>{{ disco.genre }}</p> -->
+    
     <!-- Vue.js -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <!-- AXIOS -->
